@@ -42,6 +42,10 @@ func main() {
 	r.POST("/api/*path", myRouter.GinHandler) // must have *path parameter
 	r.Run()
 }
+
+// Try it:
+//     $ curl -H "Content-Type: application/json" -X POST --data '{"phrase": "hello"}' localhost:8080/api/echo
+//     {"response":{"original_input":{"phrase":"hello"}}}
 ```
 
 To generate OpenAPI/Swagger schema:
