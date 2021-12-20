@@ -5,7 +5,7 @@ go-fastapi is a library to quickly build APIs. It is inspired by Python's popula
 Features:
 * Auto-generated OpenAPI/Swagger schema without any markup
 * Declare handlers using types, not just `Context`
-* [gin](https://github.com/gin-gonic/gin)-based
+* Based on [gin](https://github.com/gin-gonic/gin) framework
 
 ## Example
 
