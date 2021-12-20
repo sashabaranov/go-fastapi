@@ -1,4 +1,7 @@
 ## go-fastapi
+[![Go Reference](https://pkg.go.dev/badge/github.com/sashabaranov/go-fastapi.svg)](https://pkg.go.dev/github.com/sashabaranov/go-fastapi)
+[![Go Report Card](https://goreportcard.com/badge/github.com/sashabaranov/go-gpt3)](https://goreportcard.com/report/github.com/sashabaranov/go-fastapi)
+
 
 go-fastapi is a library to quickly build APIs. It is inspired by Python's popular [FastAPI](https://github.com/tiangolo/fastapi) library.
 
