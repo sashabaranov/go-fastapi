@@ -9,6 +9,7 @@ import (
 
 func (r *Router) EmitOpenAPIDefinition() openapi.Swagger {
 	sw := openapi.Swagger{}
+	sw.Info = &openapi.Info{}
 	sw.Paths = &openapi.Paths{
 		Paths: make(map[string]openapi.PathItem),
 	}
