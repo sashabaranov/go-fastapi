@@ -10,6 +10,8 @@ Features:
 * Declare handlers using types, not just `Context`
 * Based on [gin](https://github.com/gin-gonic/gin) framework
 
+Installation: `go get github.com/sashabaranov/go-fastapi`
+
 ## Example
 
 ```go
