@@ -2,6 +2,7 @@ package fastapi
 
 import (
 	"fmt"
+	"net/http"
 	"reflect"
 
 	openapi "github.com/go-openapi/spec"
@@ -9,7 +10,10 @@ import (
 
 func (r *Router) EmitOpenAPIDefinition() openapi.Swagger {
 	sw := openapi.Swagger{}
+	sw.Swagger = "2.0"
 	sw.Info = &openapi.Info{}
+	sw.Info.Title = "API generated with go-fastapi"
+	sw.Info.Version = "1.0"
 	sw.Paths = &openapi.Paths{
 		Paths: make(map[string]openapi.PathItem),
 	}
@@ -46,6 +50,12 @@ func (r *Router) EmitOpenAPIDefinition() openapi.Swagger {
 
 		op := &openapi.Operation{}
 		op.Parameters = []openapi.Parameter{param}
+		op.Responses = &openapi.Responses{}
+		op.Responses.StatusCodeResponses = make(map[int]openapi.Response)
+		ref := openapi.ResponseRef(
+			fmt.Sprintf("#/definitions/%s", outputType.Name()),
+		)
+		op.Responses.StatusCodeResponses[http.StatusOK] = *ref
 
 		pi := openapi.PathItem{}
 		pi.Post = op
