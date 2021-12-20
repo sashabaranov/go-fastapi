@@ -65,4 +65,4 @@ jsonBytes, _ := json.MarshalIndent(swagger, "", "    ")
 fmt.Println(string(jsonBytes))
 ```
 
-[![Et voilà](https://user-images.githubusercontent.com/677093/146807480-be53b3fb-6de8-451f-8373-e8d6da54a032.png)
+<img src="https://user-images.githubusercontent.com/677093/146807480-be53b3fb-6de8-451f-8373-e8d6da54a032.png" width="400px" height="auto">
