@@ -20,9 +20,6 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/sashabaranov/fastapi"
-
-	"encoding/json"
-	"fmt"
 )
 
 type EchoInput struct {
