@@ -19,7 +19,7 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/sashabaranov/fastapi"
+	"github.com/sashabaranov/go-fastapi"
 )
 
 type EchoInput struct {
